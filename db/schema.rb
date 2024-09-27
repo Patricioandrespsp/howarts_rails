@@ -14,90 +14,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_26_195442) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "beers", force: :cascade do |t|
-    t.string "brand"
-    t.string "name"
-    t.string "alcoholic_grade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "yeast_type"
-    t.string "style_type"
-    t.string "hops"
-    t.string "malt"
-    t.integer "ibu"
-  end
-
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "house"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "documentaryfilms", force: :cascade do |t|
-    t.string "name"
-    t.string "synopsis"
-    t.string "director"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "images", force: :cascade do |t|
-    t.string "url_image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "journalists", force: :cascade do |t|
-    t.string "lastname"
-    t.string "specialty"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "movies", force: :cascade do |t|
-    t.string "name"
-    t.string "synopsis"
-    t.string "director"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string "product_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "series", force: :cascade do |t|
-    t.string "name"
-    t.string "synopsis"
-    t.string "director"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tasks", force: :cascade do |t|
-    t.string "name"
-    t.boolean "completed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "age"
-    t.string "Correo"
   end
 
 end
